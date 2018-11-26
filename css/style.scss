@@ -1,0 +1,126 @@
+html, body, div, span, applet, object, iframe,
+h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	//height: 100%;
+}
+a {
+	text-decoration: none
+}
+
+body {
+	overflow: hidden;
+	line-height: 1;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-size:cover;
+	height: 100%;
+}
+$bg: #DDD;
+
+.nav {
+	width: 100%;
+	font-size: 2vw;
+
+	img {
+		height: 25px;
+		width: 25px;
+		border-radius: 50%;
+	}
+	
+	ul {
+		display: flex;
+		flex-direction: column;
+
+		li {
+			text-align: center;
+			&:hover{
+					background-color: darken($bg, 50%);
+			};
+
+			a {
+				color: black;
+				text-transform: uppercase;
+				display: block;
+				width: 100%;
+				&:hover{
+					color : $bg;
+				};
+			}
+		}
+	}
+
+	#here {
+		background-color: orange;
+	}
+}
+
+.menu {
+	background-color: $bg;
+	display: none;
+}
+
+.titre {
+	background-color: white;
+	width: 100%;
+	text-align: center;
+	opacity: 0.6;
+	font-size: 2vw;
+}
+
+@media screen and (min-width: 970px) {
+	.nav {
+
+		#burger {
+			display: none;
+		}
+		#close {
+			display: none;
+		}
+		ul {
+			margin: 0 20%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	.menu {
+		display: block;
+	}
+}
+
